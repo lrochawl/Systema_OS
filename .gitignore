@@ -26,5 +26,3 @@ application/logs/*
 ci_sessions/
 
 uploads
-application/config/config.php
-application/config/config.php
