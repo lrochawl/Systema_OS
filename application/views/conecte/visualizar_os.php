@@ -73,9 +73,9 @@ $totalProdutos = 0; ?>
                                                 <span>
                                                     <?php echo $result->nome ?></span> <br />
                                                 <span>Telefone:
-                                                    <?php echo $result->telefone ?></span><br />
+                                                    <?php echo $result->telefone_usuario ?></span><br />
                                                 <span>Email:
-                                                    <?php echo $result->email ?></span>
+                                                    <?php echo $result->email_responsavel ?></span>
                                             </li>
                                         </ul>
                                     </td>
@@ -155,7 +155,7 @@ $totalProdutos = 0; ?>
                                         foreach ($produtos as $p) {
                                             $totalProdutos = $totalProdutos + $p->subTotal;
                                             echo '<tr>';
-                                            echo '<td style="text-align: center">' . $p->descricao . '</td>';
+                                            echo '<td >' . $p->descricao . '</td>';
                                             echo '<td style="text-align: center">' . $p->quantidade . '</td>';
 
                                             echo '<td style="text-align: center">R$ ' . number_format($p->subTotal, 2, ',', '.') . '</td>';
@@ -169,7 +169,7 @@ $totalProdutos = 0; ?>
                                             $preco = $s->preco;
                                             $totalServico = $totalServico + $preco;
                                             echo '<tr>';
-                                            echo '<td style="text-align: center">' . $s->nome . '</td>';
+                                            echo '<td >' . $s->nome . '</td>';
                                             echo '<td></td>';
                                             echo '<td style="text-align: center">R$ ' . number_format($s->preco, 2, ',', '.') . '</td>';
                                             echo '</tr>';
