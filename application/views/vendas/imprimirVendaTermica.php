@@ -3,7 +3,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Map OS</title>
+    <title><?= $this->config->item('app_name') ?> </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" />
@@ -15,7 +15,7 @@
 
     <style>
         .table {
-            
+
             width:72mm;
             margin: 0 auto;
         }
@@ -76,7 +76,7 @@
                                             </li>
                                         </ul>
                                     </td>
-                                    
+
                                 </tr>
                             </tbody>
                         </table>
@@ -120,7 +120,7 @@
                         <?php
                         } ?>
                         <hr />
-                        
+
                     </div>
                 </div>
             </div>

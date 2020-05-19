@@ -3,7 +3,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Map OS</title>
+    <title><?= $this->config->item('app_name') ?> </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.min.js"></script>
 </head>
 
-<body>
+<body class="bgColorPrint">
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span12">
