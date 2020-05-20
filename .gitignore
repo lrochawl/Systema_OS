@@ -26,3 +26,4 @@ application/logs/*
 ci_sessions/
 
 uploads
+*.php

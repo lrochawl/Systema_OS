@@ -16,6 +16,7 @@ body {
 #search input[type=text]:focus {
 	color: #777777;
 }
+
 #sidebar > ul{border-bottom: 1px solid #37414b}
 #sidebar > ul > li {
 	border-top: 1px solid #37414b; border-bottom: 1px solid #1f262d;
@@ -47,6 +48,7 @@ body {
 #search input[type=text]:focus {
 	color: #2e363f; color: #fff; box-shadow:none;
 }
+
 .dropdown-menu li a:hover, .dropdown-menu .active a, .dropdown-menu .active a:hover {
     color: #eeeeee;
 	background:#666;

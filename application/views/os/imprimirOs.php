@@ -19,7 +19,7 @@ $totalProdutos = 0; ?>
     </style>
 </head>
 
-<body>
+<body >
 
     <div class="container-fluid">
         <div class="row-fluid">
