@@ -65,10 +65,9 @@ class Produtos extends MY_Controller
             $data = [
                 'codDeBarra' => set_value('codDeBarra'),
                 'descricao' => set_value('descricao'),
-                'linha' => set_value('linha'),
+                'unidade' => set_value('unidade'),
                 'precoCompra' => $precoCompra,
                 'precoVenda' => $precoVenda,
-                'localizacao' => set_value('localizacao'),
                 'estoque' => set_value('estoque'),
                 'estoqueMinimo' => set_value('estoqueMinimo'),
                 'saida' => set_value('saida'),
@@ -111,10 +110,9 @@ class Produtos extends MY_Controller
             $data = [
                 'codDeBarra' => set_value('codDeBarra'),
                 'descricao' => $this->input->post('descricao'),
-                'linha' => $this->input->post('linha'),
+                'unidade' => $this->input->post('unidade'),
                 'precoCompra' => $precoCompra,
                 'precoVenda' => $precoVenda,
-                'localizacao' => $this->input->post('localizacao'),
                 'estoque' => $this->input->post('estoque'),
                 'estoqueMinimo' => $this->input->post('estoqueMinimo'),
                 'saida' => set_value('saida'),

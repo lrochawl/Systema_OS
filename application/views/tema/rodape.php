@@ -2,7 +2,7 @@
 <!--Footer-part-->
 <div class="row-fluid">
     <div id="footer" class="span12"> <a href="https://github.com/RamonSilva20/mapos" target="_blank">
-        <?= date('Y'); ?> &copy; WL Topos-OS - Lucas Rocha </a></div>
+        <?= date('Y'); ?> &copy; GV-OS - Lucas Rocha </a></div>
   </div>
   <!--end-Footer-part-->
   <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>

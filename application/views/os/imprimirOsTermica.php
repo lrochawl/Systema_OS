@@ -21,7 +21,7 @@ $totalProdutos = 0; ?>
     </style>
 </head>
 
-<body >
+<body>
 
     <div class="container-fluid">
         <div class="row-fluid">
@@ -50,7 +50,7 @@ $totalProdutos = 0; ?>
                                 <?php } ?>
                             </tbody>
                         </table>
-
+    
                         <table class="table table-condensend">
                             <tbody>
                                 <tr>

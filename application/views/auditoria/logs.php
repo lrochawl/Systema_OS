@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
+
 <a href="#modal-excluir" role="button" data-toggle="modal" class="btn btn-danger tip-top" title="Excluir Logs"><i class="fas fa-trash-alt"></i> Remover Logs - 30 dias ou mais</a>
 
 <div class="widget-box">
@@ -8,6 +13,7 @@
         <h5>Logs</h5>
     </div>
     <div class="widget-content nopadding">
+         <div class="table-responsive">
         <table class="table table-bordered ">
             <thead>
                 <tr style="backgroud-color: #2D335B">
@@ -35,6 +41,7 @@
                 <?php } ?>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 <?php echo $this->pagination->create_links(); ?>

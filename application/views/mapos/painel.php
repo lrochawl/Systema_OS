@@ -5,6 +5,9 @@
 <script type="text/javascript" src="<?= base_url(); ?>assets/js/dist/plugins/jqplot.donutRenderer.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/js/dist/jquery.jqplot.min.css" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+
 <!--Action boxes-->
 <div class="container-fluid">
     <div class="quick-actions_homepage">
@@ -70,6 +73,7 @@
                 <h5>Produtos Com Estoque Mínimo</h5>
             </div>
             <div class="widget-content">
+                <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -102,10 +106,10 @@
                                     </td>
                                     <td>
                                         <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eProduto')) : ?>
-                                            <a href="<?= base_url() ?>index.php/produtos/editar/<?= $p->idProdutos ?>" class="btn btn-info">
+                                            <a href="<?= base_url() ?>index.php/produtos/editar/<?= $p->idProdutos ?>" class="btn btn-info" >
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="#atualizar-estoque" role="button" data-toggle="modal" produto="<?= $p->idProdutos?>" estoque="<?=$p->estoque?>" class="btn btn-primary tip-top" title="Atualizar Estoque"><i class="fas fa-plus-square"></i></a>
+                                            <a href="#atualizar-estoque" role="button" data-toggle="modal" produto="<?= $p->idProdutos?>" estoque="<?=$p->estoque?>" class="btn btn-primary tip-top" id="btn2-opn" title="Atualizar Estoque"><i class="fas fa-plus-square"></i></a>
                                         <?php endif; ?>
                                     </td>
                                 </tr>
@@ -118,6 +122,7 @@
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
     </div>
 
@@ -128,6 +133,7 @@
                 <h5>Ordens de Serviço Em Aberto</h5>
             </div>
             <div class="widget-content">
+                <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -174,6 +180,7 @@
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
     </div>
     <div class="widget-box">
@@ -182,6 +189,7 @@
             <h5>Ordens de Serviço Aguardando Peças</h5>
         </div>
         <div class="widget-content">
+            <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -223,6 +231,7 @@
                     <?php endif ?>
                 </tbody>
             </table>
+        </div>
         </div>
     </div>
 
