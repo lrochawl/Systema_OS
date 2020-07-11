@@ -75,17 +75,23 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="unidade" class="control-label">Unidade<span class="required">*</span></label>
+                        <label for="linha" class="control-label">Linha<span class="required">*</span></label>
                         <div class="controls">
-                            <!--<input id="unidade" type="text" name="unidade" value="<?php echo set_value('unidade'); ?>"  />-->
-                            <select id="unidade" name="unidade">
-                                <option value="UN">Unidade</option>
-                                <option value="KG">Kilograma</option>
-                                <option value="LT">Litro</option>
-                                <option value="CX">Caixa</option>
-                                <option value="M2">M²</option>
-                                <option value="OT">Outro</option>
+                            <!--<input id="linha" type="text" name="linha" value="<?php //echo set_value('linha'); ?>"  />-->
+                            <select id="linha" name="linha">
+                                <option value="SMARTPHONE">SMARTPHONE</option>
+                                <option value="SMART TV">SMART TV</option>
+                                <option value="AUDIO">AUDIO</option>
+                                <option value="PORTATEIS">PORTATEIS</option>
+                                <option value="LINHA BRANCA">LINHA BRANCA</option>
+                                <option value="OUTRO">Outro</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="estoque" class="control-label">Localização<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="estoque" type="text" name="localizacao" value="<?php echo set_value('localizacao'); ?>" />
                         </div>
                     </div>
                     <div class="control-group">
@@ -123,7 +129,7 @@
                 descricao: {
                     required: true
                 },
-                unidade: {
+                linha: {
                     required: true
                 },
                 precoCompra: {
@@ -140,7 +146,7 @@
                 descricao: {
                     required: 'Campo Requerido.'
                 },
-                unidade: {
+                linha: {
                     required: 'Campo Requerido.'
                 },
                 precoCompra: {

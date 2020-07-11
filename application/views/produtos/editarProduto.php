@@ -80,16 +80,23 @@
                     </div>
 
                     <div class="control-group">
-                        <label for="unidade" class="control-label">Unidade<span class="required">*</span></label>
+                        <label for="linha" class="control-label">Linha<span class="required">*</span></label>
                         <div class="controls">
-                            <select id="unidade" name="unidade">
-                                <option value="UN" <?= ($result->unidade == 'UN') ? 'selected' : '' ?>>Unidade</option>
-                                <option value="KG" <?= ($result->unidade == 'KG') ? 'selected' : '' ?>>Kilograma</option>
-                                <option value="LT" <?= ($result->unidade == 'LT') ? 'selected' : '' ?>>Litro</option>
-                                <option value="CX" <?= ($result->unidade == 'CX') ? 'selected' : '' ?>>Caixa</option>
-                                <option value="M2" <?= ($result->unidade == 'M2') ? 'selected' : '' ?>>M²</option>
-                                <option value="OT" <?= ($result->unidade == 'OT') ? 'selected' : '' ?>>Outro</option>
+                            <select id="linha" name="linha">
+                                <option value="SMARTPHONE" <?= ($result->linha == 'SMARTPHONE') ? 'selected' : '' ?>>SMARTPHONE</option>
+                                <option value="SMART TV" <?= ($result->linha == 'SMART TV') ? 'selected' : '' ?>>SMART TV</option>
+                                <option value="AUDIO" <?= ($result->linha == 'AUDIO') ? 'selected' : '' ?>>AUDIO</option>
+                                <option value="PORTATEIS" <?= ($result->linha == 'PORTATEIS') ? 'selected' : '' ?>>PORTATEIS</option>
+                                <option value="LINHA BRANCA" <?= ($result->linha == 'LINHA BRANCA') ? 'selected' : '' ?>>LINHA BRANCA</option>
+                                <option value="OUTRO" <?= ($result->linha == 'OUTRO') ? 'selected' : '' ?>>Outro</option>
                             </select>
+                        </div>
+                    </div>
+
+                     <div class="control-group">
+                        <label for="localizacao" class="control-label">Localização<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="localizacao" type="text" name="localizacao" value="<?php echo $result->localizacao; ?>" />
                         </div>
                     </div>
 
@@ -136,7 +143,7 @@
                 descricao: {
                     required: true
                 },
-                unidade: {
+                linha: {
                     required: true
                 },
                 precoCompra: {
@@ -145,6 +152,9 @@
                 precoVenda: {
                     required: true
                 },
+                 localizacao: {
+                    required: true
+                }
                 estoque: {
                     required: true
                 }
@@ -153,7 +163,7 @@
                 descricao: {
                     required: 'Campo Requerido.'
                 },
-                unidade: {
+                linha: {
                     required: 'Campo Requerido.'
                 },
                 precoCompra: {
@@ -162,6 +172,9 @@
                 precoVenda: {
                     required: 'Campo Requerido.'
                 },
+                 localizacao: {
+                    required: 'Campo Requerido.'
+                }
                 estoque: {
                     required: 'Campo Requerido.'
                 }

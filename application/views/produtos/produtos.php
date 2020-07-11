@@ -17,7 +17,7 @@
             <thead>
             <tr style="backgroud-color: #2D335B">
                 <th>Cod. Produto</th>
-                <th>Código de Barra</th>
+                <th>Localização</th>
                 <th>Nome</th>
                 <th>Estoque</th>
                 <th>Preço</th>
@@ -35,7 +35,7 @@
             foreach ($results as $r) {
                 echo '<tr>';
                 echo '<td>' . $r->idProdutos . '</td>';
-                echo '<td>' . $r->codDeBarra . '</td>';
+                echo '<td>' . $r->localizacao . '</td>';
                 echo '<td>' . $r->descricao . '</td>';
                 echo '<td>' . $r->estoque . '</td>';
                 echo '<td>' . number_format($r->precoVenda, 2, ',', '.') . '</td>';

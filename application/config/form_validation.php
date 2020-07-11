@@ -80,8 +80,8 @@ $config = [
             'rules' => 'required|trim',
         ],
         [
-            'field' => 'unidade',
-            'label' => 'Unidade',
+            'field' => 'linha',
+            'label' => 'Linha',
             'rules' => 'required|trim',
         ],
         [
@@ -92,6 +92,11 @@ $config = [
         [
             'field' => 'precoVenda',
             'label' => 'Preço de Venda',
+            'rules' => 'required|trim',
+        ],
+        [
+            'field' => 'localizacao',
+            'label' => 'Localização',
             'rules' => 'required|trim',
         ],
         [

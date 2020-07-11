@@ -25,9 +25,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="text-align: right"><strong>Unidade</strong></td>
+                            <td style="text-align: right"><strong>Linha</strong></td>
                             <td>
-                                <?php echo $result->unidade ?>
+                                <?php echo $result->linha ?>
                             </td>
                         </tr>
                         <tr>
@@ -40,6 +40,12 @@
                             <td style="text-align: right"><strong>Preço de Venda</strong></td>
                             <td>R$
                                 <?php echo $result->precoVenda; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right"><strong>Localização</strong></td>
+                            <td>
+                                <?php echo $result->localizacao; ?>
                             </td>
                         </tr>
                         <tr>
