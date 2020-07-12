@@ -128,9 +128,9 @@
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Permissões<span class="required">*</span></label>
+                        <label class="control-label">Permissões<span class="required" >*</span></label>
                         <div class="controls">
-                            <select name="permissoes_id" id="permissoes_id">
+                            <select name="permissoes_id" id="permissoes_id" disabled="">
                                 <?php foreach ($permissoes as $p) {
     echo '<option value="' . $p->idPermissao . '">' . $p->nome . '</option>';
 } ?>

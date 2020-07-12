@@ -110,7 +110,7 @@
 
                     <!--DATA-->
                     <div class="control-group">
-                        <label for="dataExpiracao" class="control-label">Expira em<span class="required">*</span></label>
+                        <label for="dataExpiracao" class="control-label">Expira em<span class="required" >*</span></label>
                         <div class="controls">
                             <input id="dataExpiracao" type="date" name="dataExpiracao" value="<?php echo $result->dataExpiracao; ?>" />
                         </div>
@@ -120,7 +120,7 @@
                     <div class="control-group">
                         <label class="control-label">Situação*</label>
                         <div class="controls">
-                            <select name="situacao" id="situacao">
+                            <select name="situacao" id="situacao" >
                                 <?php if ($result->situacao == 1) {
     $ativo = 'selected';
     $inativo = '';
@@ -138,7 +138,7 @@
                     <div class="control-group">
                         <label class="control-label">Permissões<span class="required">*</span></label>
                         <div class="controls">
-                            <select name="permissoes_id" id="permissoes_id">
+                            <select name="permissoes_id" id="permissoes_id" disabled="">
                                 <?php foreach ($permissoes as $p) {
     if ($p->idPermissao == $result->permissoes_id) {
         $selected = 'selected';
