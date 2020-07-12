@@ -39,7 +39,7 @@ $config['app_subname'] = 'Sistema de Controle de Ordens de Serviço';
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/Systema_OS/';
+$config['base_url'] = 'http://192.168.0.187/Systema_OS/';
 
 /*
 |--------------------------------------------------------------------------
