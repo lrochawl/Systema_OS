@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aVenda')) { ?>
     <a href="<?php echo base_url(); ?>index.php/vendas/adicionar" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Venda</a>
 <?php } ?>
@@ -10,6 +14,7 @@
         <h5>Vendas</h5>
     </div>
     <div class="widget-content nopadding">
+        <div class="table-responsive">
         <table class="table table-bordered ">
             <thead>
                 <tr style="background-color: #2D335B">
@@ -42,15 +47,15 @@
                         echo '<td>' . $faturado . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) {
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/visualizar/' . $r->idVendas . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/imprimir/' . $r->idVendas . '" target="_blank" class="btn btn-inverse tip-top" title="Imprimir A4"><i class="fas fa-print"></i></a>';
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/imprimirTermica/' . $r->idVendas . '" target="_blank" class="btn btn-inverse tip-top" title="Imprimir Não Fiscal"><i class="fas fa-print"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/visualizar/' . $r->idVendas . '" id="btnAcao" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/imprimir/' . $r->idVendas . '" target="_blank" id="btnAcao" class="btn btn-inverse tip-top" title="Imprimir A4"><i class="fas fa-print"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/imprimirTermica/' . $r->idVendas . '" target="_blank" id="btnAcao" class="btn btn-inverse tip-top" title="Imprimir Não Fiscal"><i class="fas fa-print"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eVenda')) {
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/editar/' . $r->idVendas . '" class="btn btn-info tip-top" title="Editar venda"><i class="fas fa-edit"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/vendas/editar/' . $r->idVendas . '" id="btnAcao" class="btn btn-info tip-top" title="Editar venda"><i class="fas fa-edit"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'dVenda')) {
-                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" venda="' . $r->idVendas . '" class="btn btn-danger tip-top" title="Excluir Venda"><i class="fas fa-trash-alt"></i></a>';
+                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" venda="' . $r->idVendas . '" id="btnAcao" class="btn btn-danger tip-top" title="Excluir Venda"><i class="fas fa-trash-alt"></i></a>';
                         }
                         echo '</td>';
                         echo '</tr>';
@@ -59,6 +64,7 @@
                 </tr>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 <?php echo $this->pagination->create_links(); ?>

@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <a href="<?php echo base_url() ?>index.php/usuarios/adicionar" class="btn btn-success"><i class="fas fa-user-plus"></i> Adicionar Usuário</a>
 
 <div class="widget-box">
@@ -9,6 +13,7 @@
 
     </div>
     <div class="widget-content nopadding">
+        <div class="table-responsive">
         <table class="table table-bordered ">
             <thead>
                 <tr style="backgroud-color: #2D335B">
@@ -43,6 +48,7 @@
                     } ?>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 

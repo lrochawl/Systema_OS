@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aGarantia')) { ?>
     <a href="<?php echo base_url(); ?>index.php/garantias/adicionar" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Termo Garantia</a>
 <?php } ?>
@@ -10,6 +14,7 @@
         <h5>Termo de Garantia</h5>
     </div>
     <div class="widget-content nopadding">
+        <div class="table-responsive">
         <table class="table table-bordered ">
             <thead>
                 <tr style="backgroud-color: #2D335B">
@@ -40,14 +45,14 @@
                         echo '<td><a href="' . base_url() . 'index.php/usuarios/editar/' . $r->idUsuarios . '">' . $r->nome . '</a></td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vGarantia')) {
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/garantias/visualizar/' . $r->idGarantias . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/garantias/imprimir/' . $r->idGarantias . '" target="_blank" class="btn btn-inverse tip-top" title="Imprimir"><i class="fas fa-print"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/garantias/visualizar/' . $r->idGarantias . '" id="btnAcao"  class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/garantias/imprimir/' . $r->idGarantias . '" target="_blank" id="btnAcao"  class="btn btn-inverse tip-top" title="Imprimir"><i class="fas fa-print"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eGarantia')) {
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/garantias/editar/' . $r->idGarantias . '" class="btn btn-info tip-top" title="Editar"><i class="fas fa-edit"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/garantias/editar/' . $r->idGarantias . '" id="btnAcao"  class="btn btn-info tip-top" title="Editar"><i class="fas fa-edit"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'dGarantia')) {
-                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" garantia="' . $r->idGarantias . '" class="btn btn-danger tip-top" title="Excluir"><i class="fas fa-trash-alt"></i></a>';
+                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" garantia="' . $r->idGarantias . '" id="btnAcao"  class="btn btn-danger tip-top" title="Excluir"><i class="fas fa-trash-alt"></i></a>';
                         }
                         echo '</td>';
                         echo '</tr>';
@@ -56,6 +61,7 @@
                 </tr>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 <?php echo $this->pagination->create_links(); ?>

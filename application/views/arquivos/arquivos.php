@@ -1,5 +1,8 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <link rel="stylesheet" href="<?= base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
-<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+
 
 <div class="span12" style="margin-left: 0">
     <form method="get" action="<?= current_url(); ?>">
@@ -34,6 +37,7 @@
             <h5>Arquivos</h5>
         </div>
         <div class="widget-content nopadding">
+             <div class="table-responsive">
             <table width="100%" class="table table-bordered ">
                 <thead>
                     <tr>
@@ -71,19 +75,19 @@
                             <td><?= $r->tamanho ?> KB</td>
                             <td><?= $r->tipo ?></td>
                             <td><?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vArquivo')) : ?>
-                                    <a href="<?= base_url() ?>index.php/arquivos/download/<?= $r->idDocumentos; ?>" class="btn tip-top" style="margin-right: 1%" title="Download">
+                                    <a href="<?= base_url() ?>index.php/arquivos/download/<?= $r->idDocumentos; ?>" id="btnAcao" class="btn tip-top" style="margin-right: 1%" title="Download">
                                         <i class="fas fa-download"></i>
                                     </a>
                                 <?php endif ?>
 
                                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eArquivo')) : ?>
-                                    <a href="<?= base_url() ?>index.php/arquivos/editar/<?= $r->idDocumentos ?>" class="btn btn-info tip-top" style="margin-right: 1%" title="Editar">
+                                    <a href="<?= base_url() ?>index.php/arquivos/editar/<?= $r->idDocumentos ?>" id="btnAcao" class="btn btn-info tip-top" style="margin-right: 1%" title="Editar">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 <?php endif ?>
 
                                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'dArquivo')) : ?>
-                                    <a href="#modal-excluir" style="margin-right: 1%" role="button" data-toggle="modal" arquivo="<?= $r->idDocumentos ?>" class="btn btn-danger tip-top" title="Excluir Arquivo">
+                                    <a href="#modal-excluir" style="margin-right: 1%" role="button" data-toggle="modal" arquivo="<?= $r->idDocumentos ?>" id="btnAcao" class="btn btn-danger tip-top" title="Excluir Arquivo">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 <?php endif ?>
@@ -92,6 +96,7 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
+        </div>
         </div>
     </div>
 </div>

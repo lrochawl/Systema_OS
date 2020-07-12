@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <?php $permissoes = unserialize($result->permissoes);?>
 <div class="span12" style="margin-left: 0">
     <form action="<?php echo base_url();?>index.php/permissoes/editar" id="formPermissao" method="post">
@@ -11,6 +15,7 @@
                 </span>
                 <h5>Editar Permissão</h5>
             </div>
+            <div class="table-responsive">
             <div class="widget-content">
                 
                 <div class="span4">
@@ -654,7 +659,7 @@
                 <div class="span12">
                     <div class="span6 offset3">
                         <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Atualizar</button>
-                        <a href="<?php echo base_url() ?>index.php/permissoes" id="" class="btn"><i class="fas fa-backward"></i> Voltar</a>
+                        <a href="<?php echo base_url() ?>index.php/permissoes" id="btnAcao" class="btn"><i class="fas fa-backward"></i> Voltar</a>
                     </div>
                 </div>
             </div>
@@ -662,7 +667,7 @@
             </div>
         </div>
 
-                   
+            </div>       
     </div>
 
 </form>

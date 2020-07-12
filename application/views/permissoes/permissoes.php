@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <a href="<?php echo base_url(); ?>index.php/permissoes/adicionar" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Permissão</a>
 
 <div class="widget-box">
@@ -9,6 +13,7 @@
     </div>
 
     <div class="widget-content nopadding">
+         <div class="table-responsive">
         <table class="table table-bordered ">
             <thead>
                 <tr>
@@ -39,13 +44,14 @@
                         echo '<td>' . date('d/m/Y', strtotime($r->data)) . '</td>';
                         echo '<td>' . $situacao . '</td>';
                         echo '<td>
-                                <a href="' . base_url() . 'index.php/permissoes/editar/' . $r->idPermissao . '" class="btn btn-info tip-top" title="Editar Permissão"><i class="fas fa-edit"></i></a>
-                                <a href="#modal-excluir" role="button" data-toggle="modal" permissao="' . $r->idPermissao . '" class="btn btn-danger tip-top" title="Desativar Permissão"><i class="fas fa-trash-alt"></i></a>
+                                <a href="' . base_url() . 'index.php/permissoes/editar/' . $r->idPermissao . '" id="btnAcao" class="btn btn-info tip-top" title="Editar Permissão"><i class="fas fa-edit"></i></a>
+                                <a href="#modal-excluir" role="button" data-toggle="modal" permissao="' . $r->idPermissao . '" id="btnAcao" class="btn btn-danger tip-top" title="Desativar Permissão"><i class="fas fa-trash-alt"></i></a>
                               </td>';
                         echo '</tr>';
                     } ?>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 <?php echo $this->pagination->create_links(); ?>

@@ -1,15 +1,22 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
+
 <div class="span12" style="margin-left: 0">
     <form action="<?php echo base_url(); ?>index.php/permissoes/adicionar" id="formPermissao" method="post">
 
         <div class="span12" style="margin-left: 0">
-
+             
             <div class="widget-box">
+
                 <div class="widget-title">
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>
                     <h5>Cadastro de Permissão</h5>
                 </div>
+                <div class="table-responsive">
                 <div class="widget-content">
 
                     <div class="span6">
@@ -471,12 +478,13 @@
                         <div class="span12">
                             <div class="span6 offset3">
                                 <button type="submit" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar</button>
-                                <a href="<?php echo base_url() ?>index.php/permissoes" id="" class="btn"><i class="fas fa-backward"></i> Voltar</a>
+                                <a href="<?php echo base_url() ?>index.php/permissoes" id="btnAcao" class="btn"><i class="fas fa-backward"></i> Voltar</a>
                             </div>
                         </div>
                     </div>
 
                 </div>
+            </div>
             </div>
 
 

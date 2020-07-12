@@ -100,7 +100,7 @@ $(document).ready(function(){
 	function fix_position()
 	{
 		var uwidth = $('#user-nav > ul').width();
-		$('#user-nav > ul').css({width:uwidth,'margin-left':'-' + uwidth / 2 + 'px'});
+		//$('#user-nav > ul').css({width:uwidth,'margin-left':'-' + uwidth / 2 + 'px'});
         
         var cwidth = $('#content-header .btn-group').width();
         $('#content-header .btn-group').css({width:cwidth,'margin-left':'-' + uwidth / 2 + 'px'});

@@ -46,6 +46,7 @@ hr{ border-top-color:#dadada;}
 .bg_lh{ background:#b6b3b3;}
 
 /* Header */
+
 #header {
 	height: 77px;
 	position: relative;
@@ -1301,7 +1302,7 @@ form {
 	right: 0px;
 	margin-left:20%!important;
 	margin-top:0px;
-	width:100%;
+	width:65%;
 	background:#000;
 	position: relative;
 }

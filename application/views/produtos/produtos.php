@@ -1,6 +1,10 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/table-custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="<?php echo base_url() ?>assets/js/sweetalert2.all.min.js"></script>
 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aProduto')) { ?>
-    <a href="<?php echo base_url(); ?>index.php/produtos/adicionar" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Produto</a>
-    <a href="#modal-etiquetas" role="button" data-toggle="modal" class="btn btn-success span2" style="float: right;">
+    <a href="<?php echo base_url(); ?>index.php/produtos/adicionar"  class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Produto</a>
+    <a href="#modal-etiquetas" role="button" data-toggle="modal" class="btn btn-success span2" style="float: right; margin-top: 2px;">
         <i class="fas fa-barcode"></i> Gerar Etiquetas</a>
 
 <?php } ?>
@@ -13,6 +17,7 @@
         <h5>Produtos</h5>
     </div>
     <div class="widget-content nopadding">
+         <div class="table-responsive">
         <table class="table table-bordered ">
             <thead>
             <tr style="backgroud-color: #2D335B">
@@ -41,22 +46,23 @@
                 echo '<td>' . number_format($r->precoVenda, 2, ',', '.') . '</td>';
                 echo '<td>';
                 if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) {
-                    echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/visualizar/' . $r->idProdutos . '" class="btn tip-top" title="Visualizar Produto"><i class="fas fa-eye"></i></a>  ';
+                    echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/visualizar/' . $r->idProdutos . '" id="btnAcao" class="btn tip-top" title="Visualizar Produto"><i class="fas fa-eye"></i></a>  ';
                 }
                 if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eProduto')) {
-                    echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/editar/' . $r->idProdutos . '" class="btn btn-info tip-top" title="Editar Produto"><i class="fas fa-edit"></i></a>';
+                    echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/editar/' . $r->idProdutos . '" id="btnAcao" class="btn btn-info tip-top" title="Editar Produto"><i class="fas fa-edit"></i></a>';
                 }
                 if ($this->permission->checkPermission($this->session->userdata('permissao'), 'dProduto')) {
-                    echo '<a style="margin-right: 1%" href="#modal-excluir" role="button" data-toggle="modal" produto="' . $r->idProdutos . '" class="btn btn-danger tip-top" title="Excluir Produto"><i class="fas fa-trash-alt"></i></a>';
+                    echo '<a style="margin-right: 1%" href="#modal-excluir" role="button" data-toggle="modal" produto="' . $r->idProdutos . '" id="btnAcao" class="btn btn-danger tip-top" title="Excluir Produto"><i class="fas fa-trash-alt"></i></a>';
                 }
-                if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eProduto')) {
-                    echo '<a href="#atualizar-estoque" role="button" data-toggle="modal" produto="' . $r->idProdutos . '" estoque="' . $r->estoque . '" class="btn btn-primary tip-top" title="Atualizar Estoque"><i class="fas fa-plus-square"></i></a>';
+                if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aProduto')) {
+                    echo '<a href="#atualizar-estoque" role="button" data-toggle="modal" produto="' . $r->idProdutos . '" estoque="' . $r->estoque . '" id="btnAcao" class="btn btn-primary tip-top" title="Atualizar Estoque"><i class="fas fa-plus-square"></i></a>';
                 }
                 echo '</td>';
                 echo '</tr>';
             } ?>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 <?php echo $this->pagination->create_links(); ?>

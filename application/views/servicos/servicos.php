@@ -41,10 +41,10 @@
                         echo '<td>' . $r->descricao . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eServico')) {
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/servicos/editar/' . $r->idServicos . '" class="btn btn-info tip-top" title="Editar Serviço"><i class="fas fa-edit"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/servicos/editar/' . $r->idServicos . '" id="btnAcao" class="btn btn-info tip-top" title="Editar Serviço"><i class="fas fa-edit"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'dServico')) {
-                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" servico="' . $r->idServicos . '" class="btn btn-danger tip-top" title="Excluir Serviço"><i class="fas fa-trash-alt"></i></a>  ';
+                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" servico="' . $r->idServicos . '" id="btnAcao" class="btn btn-danger tip-top" title="Excluir Serviço"><i class="fas fa-trash-alt"></i></a>  ';
                         }
                         echo '</td>';
                         echo '</tr>';
