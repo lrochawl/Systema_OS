@@ -89,9 +89,21 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="estoque" class="control-label">Localização<span class="required">*</span></label>
+                        <label for="idEstoque" class="control-label">Id. de estoque<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="estoque" type="text" name="localizacao" value="<?php echo set_value('localizacao'); ?>" />
+                            <input id="idEstoque" type="text" name="idEstoque" value="<?php echo set_value('idEstoque'); ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="idLocal" class="control-label">Local em estoque<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="idLocal" type="text" name="idLocal" value="<?php echo set_value('idLocal'); ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="idPosicao" class="control-label">Posição em estoque<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="idPosicao" type="text" name="idPosicao" value="<?php echo set_value('idPosicao'); ?>" />
                         </div>
                     </div>
                     <div class="control-group">
@@ -138,6 +150,15 @@
                 precoVenda: {
                     required: true
                 },
+                idEstoque: {
+                    required: true
+                }
+                idLocal: {
+                    required: true
+                }
+                idPosicao: {
+                    required: true
+                }
                 estoque: {
                     required: true
                 }
@@ -155,6 +176,15 @@
                 precoVenda: {
                     required: 'Campo Requerido.'
                 },
+                idEstoque: {
+                    required: 'Campo Requerido.'
+                }
+                idLocal: {
+                    required: 'Campo Requerido.'
+                }
+                idPosicao: {
+                    required: 'Campo Requerido.'
+                }
                 estoque: {
                     required: 'Campo Requerido.'
                 }

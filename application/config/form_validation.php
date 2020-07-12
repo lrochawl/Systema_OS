@@ -95,8 +95,18 @@ $config = [
             'rules' => 'required|trim',
         ],
         [
-            'field' => 'localizacao',
-            'label' => 'Localização',
+            'field' => 'idEstoque',
+            'label' => 'Id. de estique',
+            'rules' => 'required|trim',
+        ],
+        [
+            'field' => 'idLocal',
+            'label' => 'Local em estoque',
+            'rules' => 'required|trim',
+        ],
+        [
+            'field' => 'idPosicao',
+            'label' => 'Posicao em estoque',
             'rules' => 'required|trim',
         ],
         [

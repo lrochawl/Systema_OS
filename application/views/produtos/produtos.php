@@ -22,8 +22,8 @@
             <thead>
             <tr style="backgroud-color: #2D335B">
                 <th>Cod. Produto</th>
+                <th>Descrição</th>
                 <th>Localização</th>
-                <th>Nome</th>
                 <th>Estoque</th>
                 <th>Preço</th>
                 <th>Ações</th>
@@ -38,10 +38,23 @@
                                 </tr>';
             }
             foreach ($results as $r) {
+                $locais = "";
+                if($r->idEstoque != ""){
+                    $locais .= $r->idEstoque. ' | ';
+                }
+                if($r->idLocal != ""){
+                    $locais .= $r->idLocal .' | ';
+                }
+                if($r->idPosicao != ""){
+                    $locais .= $r->idPosicao ;
+                }
+
+
                 echo '<tr>';
                 echo '<td>' . $r->idProdutos . '</td>';
-                echo '<td>' . $r->localizacao . '</td>';
                 echo '<td>' . $r->descricao . '</td>';
+                echo '<td>' . $locais . '</td>';
+                
                 echo '<td>' . $r->estoque . '</td>';
                 echo '<td>' . number_format($r->precoVenda, 2, ',', '.') . '</td>';
                 echo '<td>';

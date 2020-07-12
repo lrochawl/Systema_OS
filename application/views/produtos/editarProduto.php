@@ -94,9 +94,21 @@
                     </div>
 
                      <div class="control-group">
-                        <label for="localizacao" class="control-label">Localização<span class="required">*</span></label>
+                        <label for="idEstoque" class="control-label">Id. de estoque<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="localizacao" type="text" name="localizacao" value="<?php echo $result->localizacao; ?>" />
+                            <input id="idEstoque" type="text" name="idEstoque" value="<?php echo $result->idEstoque; ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="idLocal" class="control-label">Local em estoque<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="idLocal" type="text" name="idLocal" value="<?php echo $result->idLocal; ?>" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="idPosicao" class="control-label">Posição em estoque<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="idPosicao" type="text" name="idPosicao" value="<?php echo $result->idPosicao; ?>" />
                         </div>
                     </div>
 
@@ -152,7 +164,13 @@
                 precoVenda: {
                     required: true
                 },
-                 localizacao: {
+                 idEstoque: {
+                    required: true
+                }
+                idLocal: {
+                    required: true
+                }
+                idPosicao: {
                     required: true
                 }
                 estoque: {
@@ -172,7 +190,13 @@
                 precoVenda: {
                     required: 'Campo Requerido.'
                 },
-                 localizacao: {
+                 idEstoque: {
+                    required: 'Campo Requerido.'
+                }
+                idLocal: {
+                    required: 'Campo Requerido.'
+                }
+                idPosicao: {
                     required: 'Campo Requerido.'
                 }
                 estoque: {

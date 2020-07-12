@@ -43,9 +43,21 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="text-align: right"><strong>Localização</strong></td>
+                            <td style="text-align: right"><strong>Id. de estoque</strong></td>
                             <td>
-                                <?php echo $result->localizacao; ?>
+                                <?php echo $result->idEstoque; ?>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: right"><strong>Loc. em estoque</strong></td>
+                            <td>
+                                <?php echo $result->idLocal; ?>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: right"><strong>Posição em estoque</strong></td>
+                            <td>
+                                <?php echo $result->idPosicao; ?>
                             </td>
                         </tr>
                         <tr>
