@@ -52,7 +52,7 @@
 
 </head>
 
-<body>
+<body >
   <!--Header-part-->
   <div id="header">
     <h1><a href=""> <?= $configuration['app_name'] ?: 'Map-OS' ?> </a></h1>
@@ -64,10 +64,10 @@
       <li class=""><a title="" href="<?= site_url(); ?>/mine"><i class="fas fa-eye"></i> <span class="text">Área do Cliente</span></a></li>
       <li class="pull-right"><a href="https://github.com/RamonSilva20/mapos" target="_blank"><i class="fas fa-asterisk"></i> <span class="text">Versão:
             <?= $this->config->item('app_version'); ?></span></a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-cog"></i> <?= $this->session->userdata('nome') ?> <b class="caret"></b></a>
+      <li class="dropdown" >
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-cog"></i><span id="idUser0" > <?= $this->session->userdata('nome') ?></span> <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li class=""><a title="Meu Perfil" href="<?= site_url('mapos/minhaConta'); ?>"><i class="fas fa-user"></i> <span class="text">Meu Perfil</span></a></li>
+          <li class=""><a title="Meu Perfil" href="<?= site_url('mapos/minhaConta'); ?>"><i class="fas fa-user"></i> <span  class="text">Meu Perfil</span></a></li>
           <li class="divider"></li>
           <li class=""><a title="Sair do Sistema" href="<?= site_url('login/sair'); ?>"><i class="fas fa-sign-out-alt"></i> <span class="text">Sair do Sistema</span></a></li>
         </ul>
@@ -81,4 +81,5 @@
       <button type="submit" class="tip-bottom" title="Pesquisar"><i class="fas fa-search fa-white"></i></button>
     </form>
   </div>
+  
   <!--close-top-serch-->

@@ -126,13 +126,24 @@
                             </select>
                         </div>
                     </div>
-
+                  
                     <div class="control-group">
                         <label class="control-label">Permissões<span class="required" >*</span></label>
                         <div class="controls">
-                            <select name="permissoes_id" id="permissoes_id" disabled="">
+                            <select name="permissoes_id"   >
                                 <?php foreach ($permissoes as $p) {
-    echo '<option value="' . $p->idPermissao . '">' . $p->nome . '</option>';
+                         $permite = "";
+                         $thisNivel = $this->session->userdata('permissao');           
+                         
+                         if($p->nome == "Administrador" and $thisNivel == 2 ){
+
+                               $permite='visibily'; 
+                            }elseif ($p->nome == "Administrador" and $thisNivel != 2) {
+                                
+                               $permite='hidden'; 
+                            }
+                            
+    echo '<option value="' . $p->idPermissao . '" style="visibility:'.$permite.';">' . $p->nome . '</option>';
 } ?>
                             </select>
                         </div>
@@ -157,7 +168,13 @@
 
 <script src="<?php echo base_url() ?>assets/js/jquery.validate.js"></script>
 <script type="text/javascript">
+
+   
+   
+
     $(document).ready(function() {
+    
+
 
         $('#formUsuario').validate({
             rules: {

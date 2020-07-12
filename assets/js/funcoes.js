@@ -6,6 +6,7 @@ $(function () {
 
 });
 
+
 $(function () {
     // INICIO FUNÇÃO DE MASCARA CPF/CNPJ
     var cpfMascara = function (val) {

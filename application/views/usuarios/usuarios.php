@@ -34,6 +34,20 @@
                             </tr>';
                     }
                     foreach ($results as $r) {
+                        $permite = "";
+                         $thisNivel = $this->session->userdata('permissao');
+
+                         if($r->permissao == "Administrador" and $thisNivel == 2 ){
+
+                             $permite='visibily'; 
+                            }elseif ($r->permissao == "Administrador" and $thisNivel != 2) {
+                                
+                               $permite='hidden'; 
+                            }
+                            
+                           
+  
+
                         echo '<tr>';
                         echo '<td>' . $r->idUsuarios . '</td>';
                         echo '<td>' . $r->nome . '</td>';
@@ -42,7 +56,7 @@
                         echo '<td>' . $r->permissao . '</td>';
                         echo '<td>' . $r->dataExpiracao . '</td>';
                         echo '<td>
-                                <a href="' . base_url() . 'index.php/usuarios/editar/' . $r->idUsuarios . '" class="btn btn-info tip-top" title="Editar Usuário"><i class="fas fa-edit"></i></a>
+                                <a style="visibility:'.$permite.';" href="' . base_url() . 'index.php/usuarios/editar/' . $r->idUsuarios . '" class="btn btn-info tip-top" title="Editar Usuário"><i  class="fas fa-edit"></i></a>
                                 </td>';
                         echo '</tr>';
                     } ?>
@@ -52,4 +66,6 @@
     </div>
 </div>
 
+    
+ 
 <?php echo $this->pagination->create_links(); ?>

@@ -25,7 +25,7 @@
                             <tr style="backgroud-color: #2D335B">
                                 <th>#</th>
                                 <th>Nome</th>
-                                <th>Preço</th>
+                                <th>Linha</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -38,7 +38,7 @@
                                 echo '<tr>';
                                 echo '<td>' . $r->idProdutos . '</td>';
                                 echo '<td>' . $r->descricao . '</td>';
-                                echo '<td>' . $r->precoVenda . '</td>';
+                                echo '<td>' . $r->linha . '</td>';
                                 echo '<td>';
                                 if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) {
                                     echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/visualizar/' . $r->idProdutos . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';

@@ -138,14 +138,24 @@
                     <div class="control-group">
                         <label class="control-label">Permissões<span class="required">*</span></label>
                         <div class="controls">
-                            <select name="permissoes_id" id="permissoes_id" disabled="">
+                            <select name="permissoes_id" id="permissoes_id" >
                                 <?php foreach ($permissoes as $p) {
     if ($p->idPermissao == $result->permissoes_id) {
         $selected = 'selected';
     } else {
         $selected = '';
     }
-    echo '<option value="' . $p->idPermissao . '"' . $selected . '>' . $p->nome . '</option>';
+     $permite = "";
+                         $thisNivel = $this->session->userdata('permissao');           
+                         
+                         if($p->nome == "Administrador" and $thisNivel == 2 ){
+
+                               $permite='visibily'; 
+                            }elseif ($p->nome == "Administrador" and $thisNivel != 2) {
+                                
+                               $permite='hidden'; 
+                            }
+    echo '<option value="' . $p->idPermissao . '"' . $selected . ' style="visibility:'.$permite.';">' . $p->nome . '</option>';
 } ?>
                             </select>
                         </div>
