@@ -4,8 +4,10 @@
     margin-bottom: 15px;
     overflow-y: hidden;
 }
-#btnAcao{
+@media only screen and (max-width: 480px){
+	#btnAcao{
 	width: 28%;
 	margin-top: 2px;
+}
 }
 
