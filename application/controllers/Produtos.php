@@ -65,6 +65,7 @@ class Produtos extends MY_Controller
             $data = [
                 'codDeBarra' => set_value('codDeBarra'),
                 'descricao' => set_value('descricao'),
+                'compatibilidade' => set_value('compatibilidade'),
                 'linha' => set_value('linha'),
                 'precoCompra' => $precoCompra,
                 'precoVenda' => $precoVenda,

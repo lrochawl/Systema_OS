@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MAPOS</title>
+    <title>Imprimir Produtos</title>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,8 +26,8 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="font-size: 1.2em; padding: 5px;">Nome</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">UN</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Descrição</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Local</th>
                                     <th style="font-size: 1.2em; padding: 5px;">Preço Compra</th>
                                     <th style="font-size: 1.2em; padding: 5px;">Preço Venda</th>
                                     <th style="font-size: 1.2em; padding: 5px;">Estoque</th>
@@ -38,7 +38,7 @@
                                     foreach ($produtos as $p) {
                                         echo '<tr>';
                                         echo '<td>' . $p->descricao . '</td>';
-                                        echo '<td>' . $p->unidade . '</td>';
+                                        echo '<td>' . $p->idLocal . '</td>';
                                         echo '<td>' . $p->precoCompra . '</td>';
                                         echo '<td>' . $p->precoVenda . '</td>';
                                         echo '<td>' . $p->estoque . '</td>';
